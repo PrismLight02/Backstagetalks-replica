@@ -9,15 +9,26 @@
     list-style: none;
 }
 
-:root{
-    --f-color:#251d20;
-    --issue-6:#e568ac;
-    --fs:18px
+html{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
-a:visited{
-    color: var(--f-color);
+
+:root{
+    --f-color:#251d20;
+    --issue-6-fc:#e568ac;
+    --issue-fc:#fff;
+    --fs:18px;
+    --issue-5:#00c1b5;
+    --issue-4:#ff651a;
+    --issue-3:#ffbe00;
+    --issue-2:#1d3fbb;
+    --issue-1:#e30512;
+
 }
+
+
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -25,6 +36,9 @@ body{
     font-weight: bold;
     font-size: var(--fs);
     line-height: 25px;
+    background-color: #fff;
+    transition: 0.5s;
+    overflow: hidden;
 }
 
 .nav{
@@ -53,9 +67,43 @@ nav img{
     width: 260px;
 }
 
+.issue-6{
+    scroll-snap-align: start;
+  
+}
+
+.issue-5{
+
+    scroll-snap-align: start;
+
+}
+
+.issue-4{
+
+    scroll-snap-align: start;
+
+}
+
+.issue-3{
+
+    scroll-snap-align: start;
+
+}
+
+.issue-2{
+
+    scroll-snap-align: start;
+
+}
+
+.issue-1{
+    padding-top: 40px;
+    scroll-snap-align: end;
+    padding-bottom: 40px;
+
+}
+
 .container{
-    height: 100vh;
-    width: 100vw;
     text-align: center;
     margin-inline: auto;
     padding-top: 45px;
@@ -68,15 +116,21 @@ nav img{
     width:420px;
 }
 
-.container a{
-    color:var(--issue-6);
+
+
+
+.w-caption{
+    color: var(--issue-fc);
+}
+
+.p-caption{
+    color: var(--issue-6-fc);
 }
 
 
 
-
 .container> a{
-    display: block;
+    display: inline-block;
 }
 
 .container p, .container a{
@@ -90,21 +144,24 @@ nav img{
 }
 
 .content{
-    position: fixed;
+    /* position: fixed;
+    z-index: 0; */
     bottom: 10px;
     width: 100%;
-    
 }
-
+/* 
 .content-container{
     display: flex;
     justify-content: space-between;
     margin-left: 15px;
     padding-top: 20px;
     margin-right: 15px;
-}
+} */
 
 footer{
+    position: fixed;
+    bottom: 10px;
+    left: 15px;
     width: 320px;
     margin-bottom: 10px;
 }
@@ -126,6 +183,9 @@ footer{
 }
 
 .footer-nav{
+    position: fixed;
+    bottom: 10px;
+    right:15px;
     padding-top: 42px;
     font-weight: 400;
     line-height: 1.6;
@@ -135,13 +195,34 @@ footer{
 .footer-nav ul li a{
     text-decoration: none;
 }
+.footer-nav ul li a:active{
+    font-weight: 1000;
+    text-decoration: underline;
+}
 
+.footer-nav ul li a:visited{
+    color: #251d20;
+}
+
+.footer-nav ul li a:hover{
+    font-weight: 1000;
+    text-decoration: underline;
+}
 .mobile-email{
     padding-top: 20px;
     display: none;
 }
 
 @media (max-width:760px) {
+
+    body{
+        overflow: auto;
+    }
+
+    html{
+    scroll-snap-type:none;
+}
+
     nav img{
         width: 160px;
     }
@@ -171,8 +252,18 @@ footer{
     }
 
     footer{
+        position: relative;
         width: auto;
         padding-top: 80px;
         text-align: center;
+        right: 0px;
+        left: 0px;
+        padding: 80px 0 0 0;
+    }
+    footer a{
+        color: #251d20;
+    }
+    .footer-nav{
+        position: relative;
     }
 }
