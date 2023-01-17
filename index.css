@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; 
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -12,6 +17,9 @@
 html{
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    overflow:   scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 
@@ -38,7 +46,6 @@ body{
     line-height: 25px;
     background-color: #fff;
     transition: 0.5s;
-    overflow: hidden;
 }
 
 .nav{
@@ -166,6 +173,10 @@ footer{
     left: 15px;
     width: 320px;
     margin-bottom: 10px;
+}
+
+footer a {
+    color: #251d20;
 }
 
 .caption{
