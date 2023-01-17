@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --f-color:#251d20;
+    --issue-6:#e568ac;
+    --fs:18px
+}
+
+a:visited{
+    color: var(--f-color);
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: var(--f-color);
+    font-weight: bold;
+    font-size: var(--fs);
+    line-height: 25px;
+}
+
+.nav{
+    position: fixed;
+    width: 100%;
+}
+
+.nav a{
+    text-decoration: none;
+}
+
+.nav a:hover{
+    text-decoration: underline;
+}
+
+nav{
+    margin-left: 15px;
+    padding-top: 20px;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav img{
+    width: 260px;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    margin-inline: auto;
+    padding-top: 45px;
+    text-decoration: bold;
+    font-size: 18px;
+
+}
+
+.issue-img{
+    width:420px;
+}
+
+.container a{
+    color:var(--issue-6);
+}
+
+
+
+
+.container> a{
+    display: block;
+}
+
+.container p, .container a{
+    margin-bottom: 18px;
+}
+
+.issue-fs{
+    font-size: 15px;
+    padding-top: 3px;
+    line-height: 22px;
+}
+
+.content{
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    
+}
+
+.content-container{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    padding-top: 20px;
+    margin-right: 15px;
+}
+
+footer{
+    width: 320px;
+    margin-bottom: 10px;
+}
+
+.caption{
+    font-size: 12px;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.content-container a{
+    text-decoration: underline;
+}
+
+.content-container a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-nav{
+    padding-top: 42px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-decoration: none;
+}
+
+.footer-nav ul li a{
+    text-decoration: none;
+}
+
+.mobile-email{
+    padding-top: 20px;
+    display: none;
+}
+
+@media (max-width:760px) {
+    nav img{
+        width: 160px;
+    }
+
+    nav a{
+        display: none;
+    }
+
+    .nav{
+        position: relative;
+    }
+
+    .content{
+        position: relative;
+    }
+
+    .content-container{
+        display: block;
+    }
+
+    .footer-nav{
+        display: none;
+    }
+
+    .mobile-email{
+        display: block;
+    }
+
+    footer{
+        width: auto;
+        padding-top: 80px;
+        text-align: center;
+    }
+}
