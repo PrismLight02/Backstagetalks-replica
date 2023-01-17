@@ -48,11 +48,13 @@ body{
 
 .nav a{
     text-decoration: none;
+    color: #251d20;
 }
 
 .nav a:hover{
     text-decoration: underline;
 }
+
 
 nav{
     margin-left: 15px;
